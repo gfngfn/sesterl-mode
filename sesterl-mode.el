@@ -25,9 +25,7 @@
     "do" "receive" "when" "end" "case" "of"
     "val" "type" "module" "struct" "signature" "sig" "with"
     "external" "include" "require" "freeze")
-  '(("\\(\\?[a-zA-Z0-9_]+\\)\\>"
-     (1 'sesterl-tag-face t))
-    ("\\(\\-[a-zA-Z0-9_]+\\)\\>"
+  '(("\\(\\(?:\\?\\|\\-\\)[a-zA-Z0-9_]+\\)\\>"
      (1 'sesterl-tag-face t)))
   nil
   nil
