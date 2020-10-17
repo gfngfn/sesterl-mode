@@ -9,6 +9,15 @@
 
 ;;; Code:
 
+(defgroup sesterl nil
+  "Sesterl"
+  :prefix "sesterl-"
+  :group 'languages)
+
+(defface sesterl-tag-face
+  '((t (:foreground "#44ff88")))
+  "tags")
+
 (define-generic-mode sesterl-mode
   nil
   '("let" "letrec" "andrec" "in" "fun"
@@ -16,10 +25,14 @@
     "do" "receive" "when" "end" "case" "of"
     "val" "type" "module" "struct" "signature" "sig" "with"
     "external" "include" "require" "freeze")
-  nil
+  '(("\\(\\?[a-zA-Z0-9_]+\\)\\>"
+     (1 'sesterl-tag-face t))
+    ("\\(\\-[a-zA-Z0-9_]+\\)\\>"
+     (1 'sesterl-tag-face t)))
   nil
   nil
   "A major mode for editing Sesterl programs.")
+
 
 (provide 'sesterl-mode)
 ;;; sesterl-mode.el ends here
