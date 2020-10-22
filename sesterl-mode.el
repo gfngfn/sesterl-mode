@@ -15,7 +15,11 @@
   :group 'languages)
 
 (defface sesterl-tag-face
-  '((t (:foreground "#44ff88")))
+  '((t (:foreground "#88ffaa")))
+  "tags")
+
+(defface sesterl-type-variable-face
+  '((t (:foreground "#ff88dd")))
   "tags")
 
 (define-generic-mode sesterl-mode
@@ -25,8 +29,10 @@
     "do" "receive" "when" "end" "case" "of"
     "val" "type" "module" "struct" "signature" "sig" "with"
     "external" "include" "require" "freeze")
-  '(("\\(\\(?:\\?\\|\\-\\)[a-zA-Z0-9_]+\\)\\>"
-     (1 'sesterl-tag-face t)))
+  '(("\\(\\(?:\\?\\|\\-\\)[a-z0-9_]+\\)\\>"
+     (1 'sesterl-tag-face t))
+    ("\\(\\$[a-z0-9_]+\\)\\>"
+     (1 'sesterl-type-variable-face t)))
   nil
   nil
   "A major mode for editing Sesterl programs.")
