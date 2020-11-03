@@ -24,11 +24,11 @@
 
 (define-generic-mode sesterl-mode
   nil
-  '("let" "letrec" "andrec" "in" "fun"
+  '("let" "rec" "and" "in" "fun"
     "if" "then" "else" "true" "false"
     "do" "receive" "when" "end" "case" "of"
     "val" "type" "module" "struct" "signature" "sig" "with"
-    "external" "include" "require" "freeze")
+    "external" "include" "import" "freeze")
   '(("\\(\\(?:\\?\\|\\-\\)[a-z0-9_]+\\)\\>"
      (1 'sesterl-tag-face t))
     ("\\(\\$[a-z0-9_]+\\)\\>"
