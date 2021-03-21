@@ -26,7 +26,7 @@
   nil
   '("let" "rec" "and" "in" "fun"
     "if" "then" "else" "true" "false"
-    "do" "receive" "when" "end" "case" "of"
+    "act" "do" "receive" "end" "case" "of"
     "val" "type" "module" "struct" "signature" "sig" "with"
     "external" "include" "import" "freeze")
   '(("\\(\\(?:\\?\\|\\-\\)[a-z0-9_]+\\)\\>"
