@@ -28,7 +28,7 @@
     "if" "then" "else" "true" "false"
     "act" "do" "receive" "end" "case" "of"
     "val" "type" "module" "struct" "signature" "sig" "with"
-    "external" "include" "import" "freeze" "pack" "unpack" "assert")
+    "external" "include" "import" "freeze" "pack" "unpack" "assert" "open")
   '(("\\(\\(?:\\?\\|\\-\\)[a-z0-9_]+\\)\\>"
      (1 'sesterl-tag-face t))
     ("\\(\\$[a-z0-9_]+\\)\\>"
