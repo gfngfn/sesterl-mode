@@ -20,7 +20,11 @@
 
 (defface sesterl-type-variable-face
   '((t (:foreground "#ff88dd")))
-  "tags")
+  "type variables")
+
+(defface sesterl-uppercase-identifier-face
+  '((t (:foreground "#aaffff")))
+  "uppercase identifier")
 
 (define-generic-mode sesterl-mode
   nil
@@ -31,6 +35,8 @@
     "external" "include" "import" "freeze" "pack" "unpack" "assert" "open")
   '(("\\(\\(?:\\?\\|\\-\\)[a-z0-9_]+\\)\\>"
      (1 'sesterl-tag-face t))
+    ("\\([A-Z][A-Za-z0-9_]+\\)\\>"
+     (1 'sesterl-uppercase-identifier-face t))
     ("\\(\\$[a-z0-9_]+\\)\\>"
      (1 'sesterl-type-variable-face t)))
   nil
